@@ -10,6 +10,27 @@ import UIKit
 
 class CSTableViewCell: UITableViewCell {
 
+    var nameLabel: UILabel!
+    var teacherLabel: UILabel!
+    var semesterLabel: UILabel!
+    
+    let padding: CGFloat = 8
+    let labelHeight: CGFloat = 16
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style
+            , reuseIdentifier: reuseIdentifier)
+        
+        nameLabel = UILabel()
+        nameLabel.font = UIFont.systemFont(ofSize: 14)
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(nameLabel)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
