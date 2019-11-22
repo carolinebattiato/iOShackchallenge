@@ -41,7 +41,7 @@ class InfoViewController: UIViewController {
         infoTableView.dataSource = self
         infoTableView.delegate = self
         infoTableView.translatesAutoresizingMaskIntoConstraints = false
-        infoTableView.register(CSTableViewCell.self, forCellReuseIdentifier: infoReuseIdentifier)
+        infoTableView.register(InfoTableViewCell.self, forCellReuseIdentifier: infoReuseIdentifier)
         view.addSubview(infoTableView)
 
         setUpConstraints()
