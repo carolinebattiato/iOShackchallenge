@@ -11,8 +11,7 @@ import UIKit
 class CSTableViewCell: UITableViewCell {
 
     var nameLabel: UILabel!
-    var teacherLabel: UILabel!
-    var semesterLabel: UILabel!
+    var subLabel: UILabel!
     
     let padding: CGFloat = 8
     let labelHeight: CGFloat = 16
@@ -25,6 +24,12 @@ class CSTableViewCell: UITableViewCell {
         nameLabel.font = UIFont.systemFont(ofSize: 14)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(nameLabel)
+        
+        subLabel = UILabel()
+        subLabel.font = UIFont.systemFont(ofSize: 10)
+        subLabel.textColor = .gray
+        subLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(subLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,22 +42,17 @@ class CSTableViewCell: UITableViewCell {
             nameLabel.heightAnchor.constraint(equalToConstant: labelHeight),
             nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
         ])
+        
+        NSLayoutConstraint.activate([
+            subLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
+            subLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: padding)
+        ])
     }
     
     func configure(for cscourse: CSCourse) {
         nameLabel.text = cscourse.courseID + ": " + cscourse.className
+        subLabel.text = cscourse.professor + ", " + cscourse.semester
     }
 
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }
