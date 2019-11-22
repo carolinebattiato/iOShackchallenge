@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CSCourse {
+class Course {
     
     var courseID: String
     var className: String

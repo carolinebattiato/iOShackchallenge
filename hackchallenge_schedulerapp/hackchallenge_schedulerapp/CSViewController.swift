@@ -15,8 +15,8 @@ class CSViewController: UIViewController {
     var csTableView: UITableView!
     
     let csReuseIdentifier = "csCellReuse"
-    let cellHeight: CGFloat = 60
-    var courses: [CSCourse]!
+    let cellHeight: CGFloat = 40
+    var courses: [Course]!
     
 
 //    init() {
@@ -32,7 +32,7 @@ class CSViewController: UIViewController {
 
         view.backgroundColor = .white
         
-        let cs3110 = CSCourse(courseID: "CS3110", className: "Functional Programming", professor: "Michael Clarkson", semester: "Fall/Spring")
+        let cs3110 = Course(courseID: "CS3110", className: "Functional Programming", professor: "Michael Clarkson", semester: "Fall/Spring")
         
         courses = [cs3110]
 
@@ -70,9 +70,10 @@ class CSViewController: UIViewController {
         navigationItem.rightBarButtonItem = csSaveButton
         
         NSLayoutConstraint.activate([
-            csTableView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            csTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             csTableView.topAnchor.constraint(equalTo: csLabel.bottomAnchor, constant: 20),
-            csTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
+            csTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            csTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
     }

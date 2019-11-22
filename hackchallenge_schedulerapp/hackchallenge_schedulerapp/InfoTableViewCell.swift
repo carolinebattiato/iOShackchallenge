@@ -1,14 +1,14 @@
 //
-//  CSTableViewCell.swift
+//  InfoTableViewCell.swift
 //  hackchallenge_schedulerapp
 //
-//  Created by Caroline Battiato on 11/21/19.
+//  Created by Caroline Battiato on 11/22/19.
 //  Copyright © 2019 Caroline Battiato. All rights reserved.
 //
 
 import UIKit
 
-class CSTableViewCell: UITableViewCell {
+class InfoTableViewCell: UITableViewCell {
 
     var nameLabel: UILabel!
     var subLabel: UILabel!
@@ -50,9 +50,9 @@ class CSTableViewCell: UITableViewCell {
         ])
     }
     
-    func configure(for cscourse: Course) {
-        nameLabel.text = cscourse.courseID + ": " + cscourse.className
-        subLabel.text = cscourse.professor + ", " + cscourse.semester
+    func configure(for infocourse: Course) {
+        nameLabel.text = infocourse.courseID + ": " + infocourse.className
+        subLabel.text = infocourse.professor + ", " + infocourse.semester
     }
 
 
