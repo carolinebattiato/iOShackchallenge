@@ -15,11 +15,13 @@ class Course {
     var className: String
     var professor: String
     var semester: String
+    var taken: Bool
     
-    init(courseID: String, className: String, professor: String, semester: String){
+    init(courseID: String, className: String, professor: String, semester: String, taken: Bool){
         self.courseID = courseID
         self.className = className
         self.professor = professor
         self.semester = semester
+        self.taken = taken
     }
 }
