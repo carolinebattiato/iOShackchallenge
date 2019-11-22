@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import UIKit
+
+class CSCourse {
+    
+    var courseID: String
+    var className: String
+    var professor: String
+    var semester: String
+    
+    init(courseID: String, className: String, professor: String, semester: String){
+        self.courseID = courseID
+        self.className = className
+        self.professor = professor
+        self.semester = semester
+    }
+}
