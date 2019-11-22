@@ -17,7 +17,7 @@ class CSTableViewCell: UITableViewCell {
     
     let padding: CGFloat = 8
     let labelHeight: CGFloat = 16
-    let imageSize: CGFloat = 30
+    let imageSize: CGFloat = 10
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style
@@ -36,13 +36,13 @@ class CSTableViewCell: UITableViewCell {
         
         emptyImage = UIImageView(image: UIImage(named: "emptycircle"))
         emptyImage.translatesAutoresizingMaskIntoConstraints = false
-        emptyImage.contentMode = .scaleAspectFit
+        emptyImage.contentMode = .scaleToFill
         emptyImage.isHidden = false
         contentView.addSubview(emptyImage)
         
         checkImage = UIImageView(image: UIImage(named: "checkcircle"))
         checkImage.translatesAutoresizingMaskIntoConstraints = false
-        checkImage.contentMode = .scaleAspectFit
+        checkImage.contentMode = .scaleToFill
         checkImage.isHidden = true
         contentView.addSubview(checkImage)
     }
@@ -86,6 +86,5 @@ class CSTableViewCell: UITableViewCell {
 
     func toggleImage(for taken: Bool) {
         checkImage.isHidden = !taken
-        emptyImage.isHidden = taken
     }
 }

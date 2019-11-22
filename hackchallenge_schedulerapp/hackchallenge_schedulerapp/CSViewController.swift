@@ -32,7 +32,7 @@ class CSViewController: UIViewController {
 
         view.backgroundColor = .white
         
-        let cs3110 = Course(courseID: "CS3110", className: "Functional Programming", professor: "Michael Clarkson", semester: "Fall/Spring")
+        let cs3110 = Course(courseID: "CS3110", className: "Functional Programming", professor: "Michael Clarkson", semester: "Fall/Spring", taken: false)
         
         courses = [cs3110]
 
@@ -72,7 +72,7 @@ class CSViewController: UIViewController {
         NSLayoutConstraint.activate([
             csTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             csTableView.topAnchor.constraint(equalTo: csLabel.bottomAnchor, constant: 20),
-            csTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            csTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             csTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
@@ -101,5 +101,11 @@ extension CSViewController: UITableViewDataSource {
 extension CSViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeight
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let course = courses[indexPath.row]
+        let cell = tableView.cellForRow(at: indexPath) as! CSTableViewCell
+        course.taken.toggle()
+        cell.toggleImage(for: course.taken)
     }
 }

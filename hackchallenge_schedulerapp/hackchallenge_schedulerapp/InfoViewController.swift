@@ -23,7 +23,7 @@ class InfoViewController: UIViewController {
 
         view.backgroundColor = .white
         
-        let info2040 = Course(courseID: "INFO2040", className: "Networks", professor: "Austin Benson & David Easley", semester: "Fall")
+        let info2040 = Course(courseID: "INFO2040", className: "Networks", professor: "Austin Benson & David Easley", semester: "Fall", taken: false)
         infocourses = [info2040]
         
             
@@ -90,5 +90,11 @@ extension InfoViewController: UITableViewDataSource {
 extension InfoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellHeight
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let course = infocourses[indexPath.row]
+        let cell = tableView.cellForRow(at: indexPath) as! InfoTableViewCell
+        course.taken.toggle()
+        cell.toggleImage(for: course.taken)
     }
 }
