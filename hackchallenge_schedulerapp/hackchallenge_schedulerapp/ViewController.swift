@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         pushInfoSciButton.translatesAutoresizingMaskIntoConstraints = false
         pushInfoSciButton.setTitle("Information Science", for: .normal)
         pushInfoSciButton.setTitleColor(.black, for: .normal)
+        pushInfoSciButton.addTarget(self, action: #selector(pushInfoView), for: .touchUpInside)
         view.addSubview(pushInfoSciButton)
         
         setUpConstraints()
@@ -52,6 +53,12 @@ class ViewController: UIViewController {
     
     @objc func pushCSView() {
         let viewController = CSViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+
+    }
+    
+    @objc func pushInfoView() {
+        let viewController = InfoViewController()
         navigationController?.pushViewController(viewController, animated: true)
 
     }

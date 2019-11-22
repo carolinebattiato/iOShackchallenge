@@ -31,6 +31,19 @@ class CSTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setUpConstraints() {
+        NSLayoutConstraint.activate([
+            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            nameLabel.heightAnchor.constraint(equalToConstant: labelHeight),
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+        ])
+    }
+    
+    func configure(for cscourse: CSCourse) {
+        nameLabel.text = cscourse.courseID + ": " + cscourse.className
+    }
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

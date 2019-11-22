@@ -9,22 +9,40 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
+    var infoLabel: UILabel!
+    var infoSaveButton: UIBarButtonItem!
 
-    /*
-    // MARK: - Navigation
+       override func viewDidLoad() {
+           super.viewDidLoad()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+           view.backgroundColor = .white
+
+           infoLabel = UILabel()
+           infoLabel.translatesAutoresizingMaskIntoConstraints = false
+           infoLabel.text = "Information Science Major Requirements"
+           infoLabel.textColor = .black
+           infoLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+           view.addSubview(infoLabel)
+           
+           infoSaveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(infoSaveButtonPressed))
+
+           setUpConstraints()
+
+       }
+       
+       @objc func infoSaveButtonPressed() {
+           navigationController?.popViewController(animated: true)
+           dismiss(animated: true, completion: nil)
+       }
+
+       func setUpConstraints() {
+           NSLayoutConstraint.activate([
+               infoLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+               infoLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20)
+           ])
+           
+           navigationItem.rightBarButtonItem = infoSaveButton
+       }
 
 }
