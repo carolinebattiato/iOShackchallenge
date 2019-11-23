@@ -15,7 +15,7 @@ class InfoViewController: UIViewController {
     var infoTableView: UITableView!
     
     let infoReuseIdentifier = "infoCellReuse"
-    let cellHeight: CGFloat = 40
+    let cellHeight: CGFloat = 50
     var infocourses: [Course]!
 
     override func viewDidLoad() {

@@ -15,7 +15,7 @@ class CSViewController: UIViewController {
     var csTableView: UITableView!
     
     let csReuseIdentifier = "csCellReuse"
-    let cellHeight: CGFloat = 40
+    let cellHeight: CGFloat = 50
     var courses: [Course]!
     
 

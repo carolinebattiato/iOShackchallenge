@@ -17,7 +17,7 @@ class InfoTableViewCell: UITableViewCell {
     
     let padding: CGFloat = 8
     let labelHeight: CGFloat = 16
-    let imageSize: CGFloat = 10
+    let imageSize: CGFloat = 30
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style
@@ -29,7 +29,7 @@ class InfoTableViewCell: UITableViewCell {
         contentView.addSubview(nameLabel)
         
         subLabel = UILabel()
-        subLabel.font = UIFont.systemFont(ofSize: 10)
+        subLabel.font = UIFont.systemFont(ofSize: 12)
         subLabel.textColor = .gray
         subLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(subLabel)
@@ -45,6 +45,8 @@ class InfoTableViewCell: UITableViewCell {
         checkImage.contentMode = .scaleToFill
         checkImage.isHidden = true
         contentView.addSubview(checkImage)
+        
+        setUpConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -53,7 +55,7 @@ class InfoTableViewCell: UITableViewCell {
     
     func setUpConstraints() {
         NSLayoutConstraint.activate([
-            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 50),
+            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             nameLabel.heightAnchor.constraint(equalToConstant: labelHeight),
             nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
         ])
