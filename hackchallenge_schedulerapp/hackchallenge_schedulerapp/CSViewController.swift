@@ -53,6 +53,7 @@ class CSViewController: UIViewController {
         view.addSubview(csTableView)
         
         setUpConstraints()
+        updateCourses()
 
     }
     
@@ -81,9 +82,9 @@ class CSViewController: UIViewController {
     func updateCourses() {
         NetworkManager.getClasses { (courses) in
             self.courses = courses
-        }
-        DispatchQueue.main.async {
-            self.csTableView.reloadData()
+            DispatchQueue.main.async {
+                self.csTableView.reloadData()
+            }
         }
     }
 
