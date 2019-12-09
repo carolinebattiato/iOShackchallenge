@@ -83,7 +83,7 @@ class CSViewController: UIViewController {
             self.courses = courses
         }
         DispatchQueue.main.async {
-            self.tableView.reloadData()
+            self.csTableView.reloadData()
         }
     }
 
