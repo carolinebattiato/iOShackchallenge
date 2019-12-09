@@ -113,8 +113,8 @@ extension CSViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var course = courses[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath) as! CSTableViewCell
-        course.taken.toggle()
-        cell.toggleImage(for: course.taken)
+//        course.taken.toggle()
+//        cell.toggleImage(for: course.taken)
     }
 }
 

@@ -12,9 +12,9 @@ import UIKit
 struct Course: Codable {
     
     var courseID: String
-    var className: String
+//    var className: String
     var semester: String
-    var taken : Bool
+//    var taken : Bool
     
 }
 

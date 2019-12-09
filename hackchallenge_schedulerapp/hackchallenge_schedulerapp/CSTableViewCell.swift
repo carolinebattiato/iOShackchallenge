@@ -82,7 +82,7 @@ class CSTableViewCell: UITableViewCell {
     }
     
     func configure(for cscourse: Course) {
-        nameLabel.text = cscourse.courseID + ": " + cscourse.className
+        nameLabel.text = cscourse.courseID + ": " + "Introductory Python"
         subLabel.text = cscourse.semester
     }
 

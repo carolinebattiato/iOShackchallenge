@@ -94,7 +94,7 @@ extension InfoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var course = infocourses[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath) as! InfoTableViewCell
-        course.taken.toggle()
-        cell.toggleImage(for: course.taken)
+//        course.taken.toggle()
+//        cell.toggleImage(for: course.taken)
     }
 }

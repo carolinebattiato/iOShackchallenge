@@ -18,9 +18,9 @@ class NetworkManager {
             switch response.result {
             case .success(let data):
                 let jsonDecoder = JSONDecoder()
-                if let courseData = try? jsonDecoder.decode(CourseSearchResponse.self, from: data) {
-                    let courses = courseData.results
-                    didGetClasses(courses)
+                if let courseData = try? jsonDecoder.decode([Course].self, from: data) {
+                    print(courseData)
+                    didGetClasses(courseData)
                 }
             case .failure(let error):
                 print(error.localizedDescription)

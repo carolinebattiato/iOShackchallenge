@@ -82,7 +82,7 @@ class InfoTableViewCell: UITableViewCell {
     }
     
     func configure(for infocourse: Course) {
-        nameLabel.text = infocourse.courseID + ": " + infocourse.className
+        nameLabel.text = infocourse.courseID + ": " + "Networks"
         subLabel.text = infocourse.semester
     }
     
