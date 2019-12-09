@@ -78,7 +78,14 @@ class CSViewController: UIViewController {
         
     }
 
-
+    func updateCourses() {
+        NetworkManager.getClasses { (courses) in
+            self.courses = courses
+        }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 
 }
 
@@ -103,9 +110,10 @@ extension CSViewController: UITableViewDelegate {
         return cellHeight
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let course = courses[indexPath.row]
+        var course = courses[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath) as! CSTableViewCell
         course.taken.toggle()
         cell.toggleImage(for: course.taken)
     }
 }
+

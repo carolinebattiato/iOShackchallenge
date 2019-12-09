@@ -83,7 +83,7 @@ class InfoTableViewCell: UITableViewCell {
     
     func configure(for infocourse: Course) {
         nameLabel.text = infocourse.courseID + ": " + infocourse.className
-        subLabel.text = infocourse.professor + ", " + infocourse.semester
+        subLabel.text = infocourse.semester
     }
     
     func toggleImage(for taken: Bool) {

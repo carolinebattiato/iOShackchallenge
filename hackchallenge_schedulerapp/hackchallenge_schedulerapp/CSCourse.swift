@@ -17,3 +17,7 @@ struct Course: Codable {
     var taken : Bool
     
 }
+
+struct CourseSearchResponse: Codable {
+    var results: [Course]
+}

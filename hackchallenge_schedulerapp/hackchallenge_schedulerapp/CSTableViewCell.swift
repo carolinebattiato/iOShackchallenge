@@ -83,7 +83,7 @@ class CSTableViewCell: UITableViewCell {
     
     func configure(for cscourse: Course) {
         nameLabel.text = cscourse.courseID + ": " + cscourse.className
-        subLabel.text = cscourse.professor + ", " + cscourse.semester
+        subLabel.text = cscourse.semester
     }
 
     func toggleImage(for taken: Bool) {
