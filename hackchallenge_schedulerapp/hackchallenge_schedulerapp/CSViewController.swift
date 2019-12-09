@@ -32,9 +32,9 @@ class CSViewController: UIViewController {
 
         view.backgroundColor = .white
         
-        let cs3110 = Course(courseID: "CS3110", className: "Functional Programming", professor: "Michael Clarkson", semester: "Fall/Spring", taken: false)
+//        let cs3110 = Course(courseID: "CS3110", className: "Functional Programming", professor: "Michael Clarkson", semester: "Fall/Spring", taken: false)
         
-        courses = [cs3110]
+        courses = []
 
         csLabel = UILabel()
         csLabel.translatesAutoresizingMaskIntoConstraints = false

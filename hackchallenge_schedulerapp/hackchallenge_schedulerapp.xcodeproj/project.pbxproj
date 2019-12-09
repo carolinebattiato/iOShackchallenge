@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,9 +16,12 @@
 		72BCDC8E2387340F0032263F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BCDC8D2387340F0032263F /* InfoViewController.swift */; };
 		72BCDC90238739A40032263F /* CSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BCDC8F238739A40032263F /* CSTableViewCell.swift */; };
 		72BCDC9223873B880032263F /* CSCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BCDC9123873B880032263F /* CSCourse.swift */; };
+		93DC4960C1ADC233DE48CB34 /* Pods_hackchallenge_schedulerapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FB124A738952BFF15B740C /* Pods_hackchallenge_schedulerapp.framework */; };
+		FD1E53A8239DA79900AF8A32 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1E53A7239DA79900AF8A32 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B346BC4A1C3C74DCF962222 /* Pods-hackchallenge_schedulerapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackchallenge_schedulerapp.release.xcconfig"; path = "Target Support Files/Pods-hackchallenge_schedulerapp/Pods-hackchallenge_schedulerapp.release.xcconfig"; sourceTree = "<group>"; };
 		720E87CA2388539000C65C59 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		726A646D2383AE0300C6E3E5 /* CSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSViewController.swift; sourceTree = "<group>"; };
 		728B293B23836799007F5974 /* hackchallenge_schedulerapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackchallenge_schedulerapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +33,9 @@
 		72BCDC8D2387340F0032263F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		72BCDC8F238739A40032263F /* CSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTableViewCell.swift; sourceTree = "<group>"; };
 		72BCDC9123873B880032263F /* CSCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCourse.swift; sourceTree = "<group>"; };
+		ACB600FBE6E02CFDABC5434A /* Pods-hackchallenge_schedulerapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackchallenge_schedulerapp.debug.xcconfig"; path = "Target Support Files/Pods-hackchallenge_schedulerapp/Pods-hackchallenge_schedulerapp.debug.xcconfig"; sourceTree = "<group>"; };
+		F3FB124A738952BFF15B740C /* Pods_hackchallenge_schedulerapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackchallenge_schedulerapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1E53A7239DA79900AF8A32 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DC4960C1ADC233DE48CB34 /* Pods_hackchallenge_schedulerapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CD45007BDF47CEF4258C717 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3FB124A738952BFF15B740C /* Pods_hackchallenge_schedulerapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		728B293223836799007F5974 = {
 			isa = PBXGroup;
 			children = (
 				728B293D23836799007F5974 /* hackchallenge_schedulerapp */,
 				728B293C23836799007F5974 /* Products */,
+				95BCCBBA41130BC697D989BE /* Pods */,
+				0CD45007BDF47CEF4258C717 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +89,18 @@
 				728B29472383679B007F5974 /* Assets.xcassets */,
 				728B29492383679B007F5974 /* LaunchScreen.storyboard */,
 				728B294C2383679B007F5974 /* Info.plist */,
+				FD1E53A7239DA79900AF8A32 /* NetworkManager.swift */,
 			);
 			path = hackchallenge_schedulerapp;
+			sourceTree = "<group>";
+		};
+		95BCCBBA41130BC697D989BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACB600FBE6E02CFDABC5434A /* Pods-hackchallenge_schedulerapp.debug.xcconfig */,
+				6B346BC4A1C3C74DCF962222 /* Pods-hackchallenge_schedulerapp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 728B294F2383679B007F5974 /* Build configuration list for PBXNativeTarget "hackchallenge_schedulerapp" */;
 			buildPhases = (
+				0A2859D9439C182411627D7A /* [CP] Check Pods Manifest.lock */,
 				728B293723836799007F5974 /* Sources */,
 				728B293823836799007F5974 /* Frameworks */,
 				728B293923836799007F5974 /* Resources */,
+				89424A53F5D31D1487AEA832 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +170,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A2859D9439C182411627D7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hackchallenge_schedulerapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89424A53F5D31D1487AEA832 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackchallenge_schedulerapp/Pods-hackchallenge_schedulerapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackchallenge_schedulerapp/Pods-hackchallenge_schedulerapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackchallenge_schedulerapp/Pods-hackchallenge_schedulerapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		728B293723836799007F5974 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -150,6 +221,7 @@
 				728B293F23836799007F5974 /* AppDelegate.swift in Sources */,
 				72BCDC8E2387340F0032263F /* InfoViewController.swift in Sources */,
 				72BCDC90238739A40032263F /* CSTableViewCell.swift in Sources */,
+				FD1E53A8239DA79900AF8A32 /* NetworkManager.swift in Sources */,
 				720E87CB2388539000C65C59 /* InfoTableViewCell.swift in Sources */,
 				72BCDC9223873B880032263F /* CSCourse.swift in Sources */,
 				726A646E2383AE0300C6E3E5 /* CSViewController.swift in Sources */,
@@ -286,6 +358,7 @@
 		};
 		728B29502383679B007F5974 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACB600FBE6E02CFDABC5434A /* Pods-hackchallenge_schedulerapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +376,7 @@
 		};
 		728B29512383679B007F5974 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B346BC4A1C3C74DCF962222 /* Pods-hackchallenge_schedulerapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
